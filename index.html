@@ -114,6 +114,7 @@
 
           Badminton.
         </p>
+        <p>If you have any idea then together we can make it possible</p>
         <p>#OPEN TO WORK</p>
 
       </section>
@@ -273,12 +274,11 @@
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script>
-          emailjs.init('1Gzzl9lwepdeQqkz_'); // Replace with your EmailJS public key
+          emailjs.init('1Gzzl9lwepdeQqkz_'); 
     document.getElementById('Enquiry_form').addEventListener('submit', function (e) {
         e.preventDefault();
-        // Initialize EmailJS
-        const serviceID = 'service_npj1gfp'; // Replace with your Service ID
-        const templateID = 'template_u9u9eut'; // Replace with your Template ID
+        const serviceID = 'service_npj1gfp'; 
+        const templateID = 'template_u9u9eut'; 
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
@@ -289,7 +289,9 @@
         emailjs.send(serviceID, templateID, formData)
             .then(() => {
                 alert('Feedback sent successfully!');
-                document.getElementById('feedbackForm').reset();
+                function resetForm() {
+                    document.getElementById('Enquiry_form').reset();
+                }
             })
             .catch((error) => {
                 console.error('Error sending feedback:', error);
