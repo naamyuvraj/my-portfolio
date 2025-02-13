@@ -1,6 +1,6 @@
 // @ts-ignore
 import titleText from "../file-system/home/user/title/title.md?raw";
-import Bash from "./bash";
+// import Bash from "./bash";
 export type Change = {
   type: "add" | "del" | "none";
   loc: number | "end" | "none";
@@ -30,22 +30,22 @@ export default function Terminal(screenTextEngine: {
   screenTextEngine.placeMarkdown(titleText);
   screenTextEngine.placeText("user:~$");
 
-  const bash = Bash((s, md = false) => {
-    if (md) {
-      const numOfpx = screenTextEngine.placeMarkdown(s);
-      screenTextEngine.scroll(numOfpx, "px", {
-        updateMaxScroll: true,
-        moveView: false,
-      });
-      screenTextEngine.scroll(12, "lines", {
-        updateMaxScroll: false,
-        moveView: true,
-      });
-    } else {
-      const numOfLines = screenTextEngine.placeText(s);
-      screenTextEngine.scroll(numOfLines, "lines");
-    }
-  });
+  // const bash = Bash((s, md = false) => {
+  //   if (md) {
+  //     const numOfpx = screenTextEngine.placeMarkdown(s);
+  //     screenTextEngine.scroll(numOfpx, "px", {
+  //       updateMaxScroll: true,
+  //       moveView: false,
+  //     });
+  //     screenTextEngine.scroll(12, "lines", {
+  //       updateMaxScroll: false,
+  //       moveView: true,
+  //     });
+  //   } else {
+  //     const numOfLines = screenTextEngine.placeText(s);
+  //     screenTextEngine.scroll(numOfLines, "lines");
+  //   }
+  // });
 
   let oldText = "";
   function onInput() {
@@ -85,15 +85,15 @@ export default function Terminal(screenTextEngine: {
       textarea.setSelectionRange(lastSelection, lastSelection);
     }
     // textarea
-    if (e.key === "Enter") {
-      screenTextEngine.freezeInput();
-      bash.input(textarea.value);
+    // if (e.key === "Enter") {
+    //   screenTextEngine.freezeInput();
+    //   bash.input(textarea.value);
 
-      textarea.value = "";
-      const change = stringEditDistance(oldText, textarea.value);
-      oldText = textarea.value;
-      if (change) screenTextEngine.userInput(change, textarea.selectionStart);
-    }
+    //   textarea.value = "";
+    //   const change = stringEditDistance(oldText, textarea.value);
+    //   oldText = textarea.value;
+    //   if (change) screenTextEngine.userInput(change, textarea.selectionStart);
+    // }
   });
 
   window.addEventListener("keydown", (e) => {

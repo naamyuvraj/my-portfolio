@@ -347,3 +347,24 @@ a:active {
   color: #f6d4b1;
   border: #f6d4b1 solid 1px;
 }
+#Enquiry_button{
+  /* display: block; */
+  /* width: 100%; */
+  margin-top: 20px;
+  padding: 12px;
+  background: #f1c40f;
+  /* color: #222; */
+  /* font-weight: bold; */
+  font-size: 1.2rem;
+  border: none;
+  /* border-radius: 8px; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: #525252;
+}
+
+#Enquiry_button:hover {
+  background: #e67e22;
+  color: white;
+  transform: scale(1.05);
+}

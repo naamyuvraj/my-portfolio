@@ -3,14 +3,14 @@
 
 ##   Hi there, 
 
-#  *I'm Ed H*
+#  *I'm Yuvraj*
 
-##   • Software Engineer
-##   • Digital Designer
-
-
+##   • Aspiring 
+Software Engineer
 
 
 
-### Welcome to ED-Linux 1.0 LTS
-### →→ Scroll or type "help" to get started
+
+
+### Welcome to my website
+### →→ Scroll to know me!
