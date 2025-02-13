@@ -288,14 +288,14 @@
         console.log('Sending data to EmailJS:', formData);
         emailjs.send(serviceID, templateID, formData)
             .then(() => {
-                alert('Feedback sent successfully!');
+                alert('Enquiry raised successfully!');
                 function resetForm() {
                     document.getElementById('Enquiry_form').reset();
                 }
             })
             .catch((error) => {
                 console.error('Error sending feedback:', error);
-                alert(`Failed to send feedback. Error: ${error.text || error}`);
+                alert(`Failed to send enquiry. Error: ${error.text || error}`);
             });
     });
 
