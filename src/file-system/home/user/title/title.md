@@ -6,7 +6,9 @@
 #  *I'm Yuvraj*
 
 ##   • Aspiring 
-Software Engineer
+## Software Engineer
+
+## *OPEN TO WORK
 
 
 

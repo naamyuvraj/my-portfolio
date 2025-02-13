@@ -22,7 +22,7 @@
 html,
 body {
   overflow-x: hidden;
-  background-color: #f6d4b1;
+  background-color: #e4ccb2;
   font-family: "chill", sans-serif;
   font-size: 18px;
   -webkit-text-size-adjust: 100%;
@@ -352,8 +352,8 @@ a:active {
   /* width: 100%; */
   margin-top: 20px;
   padding: 12px;
-  background: #f1c40f;
-  /* color: #222; */
+  background: #525252;
+  color: #f6d4b1;
   /* font-weight: bold; */
   font-size: 1.2rem;
   border: none;
@@ -361,10 +361,23 @@ a:active {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: #525252;
+  font-family: "public-pixel", monospace;
+
 }
 
 #Enquiry_button:hover {
   background: #e67e22;
-  color: white;
+  color: #f6d4b1;
   transform: scale(1.05);
+}
+input, select, textarea {
+  /* width: 100%; */
+  padding: 8px;
+  margin-top: 8px;
+  border: none;
+  /* border-radius: 8px; */
+  background: #525252;
+  color: white;
+  font-size: 1rem;
+  outline: none;
 }
